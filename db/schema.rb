@@ -10,13 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110121033753) do
+ActiveRecord::Schema.define(:version => 20110121230919) do
 
   create_table "locations", :force => true do |t|
-    t.string   "u_name"
-    t.string   "l_name"
+    t.string   "usr_name"
+    t.string   "loc_name"
     t.float    "lat"
-    t.float    "long"
+    t.float    "lng"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "phrases", :force => true do |t|
+    t.string   "phrase"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

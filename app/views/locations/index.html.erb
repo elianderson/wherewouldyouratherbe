@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>U name</th>
-    <th>L name</th>
-    <th>Lat</th>
-    <th>Long</th>
+    <th>User Name</th>
+    <th>Location Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +13,10 @@
 
 <% @locations.each do |location| %>
   <tr>
-    <td><%= location.u_name %></td>
-    <td><%= location.l_name %></td>
+    <td><%= location.usr_name %></td>
+    <td><%= location.loc_name %></td>
     <td><%= location.lat %></td>
-    <td><%= location.long %></td>
+    <td><%= location.lng %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>

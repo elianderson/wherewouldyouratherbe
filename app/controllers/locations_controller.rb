@@ -1,12 +1,18 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
+  
+  def public
+    @location = Location.new
+  end
+  
   def index
     @locations = Location.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @locations }
+      format.json { render :json => @locations }
     end
   end
 
