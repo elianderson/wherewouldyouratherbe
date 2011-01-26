@@ -1,0 +1,272 @@
+/* BRANDON LEE KITAJCHUK:
+** brandonleekitajchuk.com
+------------------------------------------*/
+/*
+** CORE ELEMENTS
+------------------------------------------->
+*/
+article, aside, canvas, code, details, figcaption, 
+figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+
+body {
+	background: transparent url(../../images/header-bg.png) repeat-x;
+	font-size: 12px;
+	line-height: 1.5em; /* 18px */
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #92bfc6;
+}
+
+ul, li {
+	list-style: none;
+}
+
+h1 {
+	color: #fff;
+	font-size: 36px;
+	line-height: 1.1944; /* 44px */
+	margin: 0 0 0.3571em; /* 15px */
+	padding: 25px 0;
+}
+	
+h2 {
+	color: #2c4349;
+	font-family: Georgia, Serif;
+	font-size: 24px;
+	font-style: italic;
+	line-height: 1.125; /* 27px */
+	margin: 0 0 0.5em; /* 12px */
+	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+}
+	
+h3 {
+	font-size: 18px;
+	line-height: 1.1667; /* 21px */
+	margin: 0 0 0.6667em; /* 12px */
+}
+	
+h4 {
+	font-size: 15px;
+	margin: 0 0 0 0.8em; /* 12px */
+}
+	
+h5, h6 {
+	font-size: 12px;
+	margin: 0 0 1em;
+}
+
+/*
+** GLOBAL CLASSES
+------------------------------------------->
+*/
+.ir {
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -9999px;
+}
+
+.i {
+	margin: 0 auto;
+	position: relative;
+	width: 940px;
+}
+
+.a {
+	margin: 0 auto;
+	width: 600px;
+}
+
+.group:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/*
+** STRUCTURAL
+------------------------------------------->
+*/
+header {
+	border-bottom: 1px solid #e7f7fa;
+	height: 100px;
+	width: 100%;
+}
+
+#content {
+	background: #fff;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(255, 255, 255)),color-stop(1, rgb(189, 222, 229)));
+	background: -moz-linear-gradient(center bottom,rgb(255, 255, 255) 1%,rgb(189, 222, 229) 100%);
+	border-bottom: 1px solid #d6dada;
+	height: 460px;
+	padding: 20px 0;
+	width: 100%;
+}
+
+#map {
+	border: 10px solid #fff;
+	float: right;
+	height: 440px;
+	width: 680px;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+.infobox-container {
+	background: #fff;
+	border: 2px solid #c66f20;
+	height: 100px;
+	padding: 20px;
+	width: 200px;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+}
+
+#intro {
+	float: left;
+	min-height: 440px;
+	width: 220px;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+#intro p, #location p {
+	color: #252525;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 26px;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+}
+
+#location span {
+	color: #92bfc6;
+}
+
+.btn {
+	background: #252525;
+	color: #ccc;
+	font-weight: bold;
+	padding: 6px 30px;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+	text-transform: uppercase; 
+}
+
+.btn:hover {
+	color: #fff;
+}
+
+#location {
+	background: #fff;
+	height: 200px;
+	padding: 20px;
+	position: fixed;
+	top: -600px;
+	width: 560px;
+	z-index: 999;
+}
+
+#overlay {
+	background: #000;
+	display: none;
+	height: 100%;
+	left: 0;
+	opacity: 0.75;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 888;
+}
+
+footer {
+	padding: 40px 0;
+}
+
+/*
+** FORMS
+------------------------------------------->
+*/
+form li {
+	margin: 0 0 1em;
+}
+	
+label {
+	float: left;
+	font-size: 12px;
+	margin: 0 20px 0 0;
+	text-align: right;
+}
+	
+label em {
+	display: block;
+	font-size: 12px; font-weight: normal;
+	line-height: 1;
+}
+	
+textarea, input, select {
+	font-family: inherit; font-size: inherit; font-weight: normal;
+}
+	
+textarea, input[type=text] {
+	margin: 5px 0;
+	padding: 3px;
+	width: 185px;
+}
+	
+textarea {
+	overflow: auto;
+	width: 500px;
+}
+	
+input[size] {
+	width: auto;
+}
+	
+button::-moz-focus-inner {
+	border: 0;
+}
+	
+button[disabled] {
+	cursor: default;
+}
+
+input[type=submit] {
+	background: #252525;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-transform: uppercase;
+}
+
+/*
+** TYPOGRAPHY
+------------------------------------------->
+*/
+a {
+/* 	font-family: Georgia, Serif; */
+}
+
+body {
+	font-family: 'Helvetica Neue', Arial, Sans-serif;
+}

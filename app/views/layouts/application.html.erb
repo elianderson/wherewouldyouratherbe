@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Wwyrb</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'jquery.min.js' %>
-  <%= javascript_include_tag 'application.js' %>
-  <%= csrf_meta_tag %>
+<meta charset="utf-8" />
+<title>Where Would You Rather Be</title>
+
+<%= stylesheet_link_tag 'reset.css' %>
+<%= stylesheet_link_tag 'global.css' %>
+<link rel="icon" href="" type="image/x-icon" />
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="copyright" content="(c) 2011" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<%= csrf_meta_tag %>  
 </head>
 <body>
 
-<%= yield %>
+	<%= yield %>
 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&ver=3.3"></script>
+<%= javascript_include_tag 'jquery.min.js' %>
+<%= javascript_include_tag 'application.js' %>
+<!--[if IE]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </body>
 </html>

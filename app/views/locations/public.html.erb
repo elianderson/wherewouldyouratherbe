@@ -1,4 +1,67 @@
-  <h1 style="text-align: center; font-family: georgia; font-size: 30px;color: #333">Where would you rather be?</h1>
-  <div id="modal">
-    <%= render 'form' %>
-  </div>
+<section id="container">
+	<header class="i">
+		<h1 class="">Logo</h1>
+	</header>
+	
+	<section id="content">
+		<section class="i">
+			<div id="intro">
+				<h2>Looks like you're kinda bored</h2>
+				<p>
+					You should take a little break. 
+					Poke around the map a bit. 
+					If you find a cool spot, claim it in the pure name of boredom!
+				</p>
+				<h2>You would rather be:</h2>
+				<p id="wywrb"></p>
+				<a href="#" id="go-there" class="btn">This is the spot!</a>
+			</div>
+			
+			<div id="map"></div>
+		</section>
+	</section>
+	
+	<footer class="i">
+		<p>&copy; 2010 Where Would You Rather Be Right Now. All Rights Reserved.</p>
+	</footer>
+</section>
+
+<section class="a">
+<div id="location">
+	<%= form_for(@location) do |f| %>
+	<% if @location.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+			
+			<ul>
+			<% @location.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+		
+		<div class="field">
+			<%= f.text_field :usr_name %>
+		</div>
+		
+		<div class="field">
+			<%= f.text_field :loc_name %>
+		</div>
+		
+		<div class="field">
+			<%= f.hidden_field :lat %>
+		</div>
+		
+		<div class="field">
+			<%= f.hidden_field :lng %>
+		</div>
+		
+		<div class="actions">
+			<%= f.submit "Claim it and Tweet it!" %>
+		</div>
+<% end %>
+</div>
+</section>
+
+<div id="overlay"></div>
