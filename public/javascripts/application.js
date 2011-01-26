@@ -43,7 +43,7 @@ var wwyrbMaps = new function() {
 	
 	infobox = null;
 	marker = null;
-	siteURL = "http://localhost:3000/";
+	siteURL = "http://wherewouldyouratherbe.rubypdx.com/";
 	
 	// Google Services:
 	geocoderService = new google.maps.Geocoder();
