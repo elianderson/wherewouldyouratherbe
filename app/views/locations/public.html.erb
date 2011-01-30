@@ -1,6 +1,6 @@
 <section id="container">
 	<header class="i">
-		<h1 class="">Logo</h1>
+		<h1>Where Would You Rather Be?</h1>
 	</header>
 	
 	<section id="content">
@@ -21,8 +21,13 @@
 		</section>
 	</section>
 	
+	<section class="i social">
+		<h2>Where Would You Rather Be on Twitter:</h2>
+		<ul id="tweets" class="group"></ul>
+	</section>
+	
 	<footer class="i">
-		<p>&copy; 2010 Where Would You Rather Be Right Now. All Rights Reserved.</p>
+		<p>&copy; 2011 Where Would You Rather Be Right Now. All Rights Reserved.</p>
 	</footer>
 </section>
 
@@ -40,12 +45,20 @@
 			</ul>
 		</div>
 	<% end %>
+		<h2>You picked a good one, Go ahead and:</h2>
 		
 		<div class="field">
+			<label>Give us your name:</label>
 			<%= f.text_field :usr_name %>
 		</div>
 		
 		<div class="field">
+			<label>Your twitter name:</label>
+			<input type="text" name="twitter_name" id="twitter_name" size="30" />
+		</div>
+		
+		<div class="field">
+			<label>Rename this spot:</label>
 			<%= f.text_field :loc_name %>
 		</div>
 		
