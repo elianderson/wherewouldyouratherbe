@@ -1,12 +1,12 @@
-/* BRANDON LEE KITAJCHUK:
-** brandonleekitajchuk.com
+/* WHERE WOULD YOU RATHER BE:
+** wherewouldyouratherbe.rubypdx.com
+** Styles for effin' miles :/
 ------------------------------------------*/
 /*
 ** CORE ELEMENTS
 ------------------------------------------->
 */
-article, aside, canvas, code, details, figcaption, 
-figure, footer, header, hgroup, nav, section, summary {
+article, aside, canvas, code, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
 	display: block;
 }
 
@@ -17,11 +17,12 @@ body {
 }
 
 p {
+	color: #252525;
 	margin: 0 0 1em;
 }
 
 a {
-	font-weight: bold;
+	color: #2c4349;
 	text-decoration: none;
 }
 
@@ -34,11 +35,11 @@ ul, li {
 }
 
 h1 {
-	color: #fff;
+	color: #ccc;
 	font-size: 36px;
 	line-height: 1.1944; /* 44px */
 	margin: 0 0 0.3571em; /* 15px */
-	padding: 25px 0;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.9);
 }
 	
 h2 {
@@ -71,6 +72,26 @@ h5, h6 {
 ** GLOBAL CLASSES
 ------------------------------------------->
 */
+.col {
+	float: left;
+	margin-right: 20px;
+	width: 280px;
+}
+
+.col1 { width:60px; }
+.col2 { width:140px; }
+.col3 { width:220px; }
+.col4 { width:300px; }
+.col5 { width:380px; }
+.col6 { width:460px; }
+.col7 { width:540px; }
+.col8 { width:620px; }
+.col9 { width:700px; }
+.col10 { width:780px; }
+.col11 { width:860px; }
+.col12 { width:940px; }
+.last { margin-right: 0; }
+
 .ir {
 	display: block;
 	overflow: hidden;
@@ -97,6 +118,10 @@ h5, h6 {
 	visibility: hidden;
 }
 
+.social {
+	padding: 20px 0;
+}
+
 /*
 ** STRUCTURAL
 ------------------------------------------->
@@ -106,6 +131,16 @@ header {
 	height: 100px;
 	width: 100%;
 }
+
+	header h1 {
+		background: transparent url(../images/skull-x-bones.png) no-repeat left;
+		height: 36px;
+		left: -55px;
+		padding: 20px 0 25px;
+		position: absolute;
+		text-indent: 90px;
+		top: 10px;
+	}
 
 #content {
 	background: #fff;
@@ -145,9 +180,6 @@ header {
 	float: left;
 	min-height: 440px;
 	width: 220px;
-	
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 }
 
 #intro p, #location p {
@@ -185,6 +217,16 @@ header {
 	z-index: 999;
 }
 
+#tweets {
+	padding: 20px 0 0;
+	position: relative;
+}
+
+	#tweets img {
+		float: left;
+		padding: 0 8px 0 0;
+	}
+
 #overlay {
 	background: #000;
 	display: none;
@@ -213,7 +255,9 @@ label {
 	float: left;
 	font-size: 12px;
 	margin: 0 20px 0 0;
+	padding: 6px 0;
 	text-align: right;
+	width: 120px;
 }
 	
 label em {
@@ -259,14 +303,25 @@ input[type=submit] {
 	text-transform: uppercase;
 }
 
+#location input[type=submit] {
+	bottom: 20px;
+	position: absolute;
+	right: 20px;
+}
+
+.field {
+	display: block;
+}
+
 /*
 ** TYPOGRAPHY
 ------------------------------------------->
 */
 a {
-/* 	font-family: Georgia, Serif; */
+	font-family: Georgia, Serif;
+	font-weight: bold;
 }
 
-body {
+body, .btn {
 	font-family: 'Helvetica Neue', Arial, Sans-serif;
 }
