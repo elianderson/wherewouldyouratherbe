@@ -10,6 +10,16 @@ article, aside, canvas, code, details, figcaption, figure, footer, header, hgrou
 	display: block;
 }
 
+@font-face {
+    font-family: 'SinkingShipRegular';
+    src: url('../fonts/SinkiS93-webfont.eot?') format('eot'),
+         url('../fonts/SinkiS93-webfont.woff') format('woff'),
+         url('../fonts/SinkiS93-webfont.ttf') format('truetype'),
+         url('../fonts/SinkiS93-webfont.svg#webfont6KY9gUAl') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background: transparent url(../../images/header-bg.png) repeat-x;
 	font-size: 12px;
@@ -35,11 +45,11 @@ ul, li {
 }
 
 h1 {
-	color: #ccc;
+	color: #111;
 	font-size: 36px;
 	line-height: 1.1944; /* 44px */
 	margin: 0 0 0.3571em; /* 15px */
-	text-shadow: 0 1px rgba(0, 0, 0, 0.9);
+	text-shadow: 0 1px rgba(99, 99, 99, 0.7);
 }
 	
 h2 {
@@ -133,12 +143,12 @@ header {
 }
 
 	header h1 {
-		background: transparent url(../images/skull-x-bones.png) no-repeat left;
+		background: transparent url(../images/helm.png) no-repeat left;
 		height: 36px;
 		left: -55px;
 		padding: 20px 0 25px;
 		position: absolute;
-		text-indent: 90px;
+		text-indent: 110px;
 		top: 10px;
 	}
 
@@ -324,4 +334,8 @@ a {
 
 body, .btn {
 	font-family: 'Helvetica Neue', Arial, Sans-serif;
+}
+
+h1 {
+	font-family: 'SinkingShipRegular', 'Helvetica Neue', Arial, Sans-serif;
 }

@@ -21,8 +21,17 @@ $(window).load(function() {
 			url: this.action,
 			data: $(this).serialize(),
 			success: function() {
-				$("#location").animate({"top": "-600px"}, "slow");
-				$("#overlay").animate({"opacity": "hide"}, "slow");
+				$.getJSON(wwyrbMaps.siteURL + "phrases.json", function(data) {
+					var phrases = [];
+					$.each(data, function(i, item) {
+						phrases.push(item.phrase.phrase);
+					});
+					
+					var random = Math.floor(Math.random() * phrases.length);
+					var tweet  = "http://twitter.com/home?status=@" + $("#twitter_name").val() + " ";
+						tweet += phrases[random] + $("#location_loc_name").val() + " via @WWYRB";
+					window.location.href = tweet;
+				});
 			}
 		});
 		return false;
@@ -209,7 +218,8 @@ var wwyrbMaps = new function() {
 ** RETURN PUBLICS
 ---------------------------------------------------------------*/
 	return {
-		init: init
+		init: init,
+		siteURL: siteURL
 	}
 
 }();
